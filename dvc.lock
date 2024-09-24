@@ -12,3 +12,19 @@ stages:
       hash: md5
       md5: 1eec95cacd0a1ad08e06b727d8b701c2
       size: 43618
+  plot-voltage:
+    cmd: python scripts/plot-voltage.py
+    deps:
+    - path: data/raw/data.csv
+      hash: md5
+      md5: 1eec95cacd0a1ad08e06b727d8b701c2
+      size: 43618
+    - path: scripts/plot-voltage.py
+      hash: md5
+      md5: 087a567a0c0f6199a908399013d564a1
+      size: 297
+    outs:
+    - path: figures/voltage-time-series.png
+      hash: md5
+      md5: a4fc5ebee750a839c23baee1e58bf94a
+      size: 45123
