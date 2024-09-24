@@ -4,3 +4,7 @@ datasets:
   - path: data/raw/data.csv
     title: Raw data
     description: This is raw voltage data.
+figures:
+  - path: figures/voltage-time-series.png
+    title: Raw voltage time series
+    description: A plot of the raw voltage time series.
