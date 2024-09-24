@@ -1,0 +1,22 @@
+stages:
+  collect-data:
+    cmd: python scripts/collect-data.py
+    deps:
+      - scripts/collect-data.py
+    outs:
+      - data/raw/data.csv
+  plot-voltage:
+    cmd: python scripts/plot-voltage.py
+    deps:
+      - scripts/plot-voltage.py
+      - data/raw/data.csv
+    outs:
+      - figures/voltage-time-series.png
+  build-paper:
+    cmd: latexmk -pdf paper.tex
+    wdir: paper
+    deps:
+      - ../figures
+      - paper.tex
+    outs:
+      - paper.pdf

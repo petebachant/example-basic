@@ -1,0 +1,61 @@
+schema: '2.0'
+stages:
+  collect-data:
+    cmd: python scripts/collect-data.py
+    deps:
+    - path: scripts/collect-data.py
+      hash: md5
+      md5: 570acda0f323c18ae0a336583e9d661d
+      size: 424
+    outs:
+    - path: data/raw/data.csv
+      hash: md5
+      md5: 1eec95cacd0a1ad08e06b727d8b701c2
+      size: 43618
+  plot-voltage:
+    cmd: python scripts/plot-voltage.py
+    deps:
+    - path: data/raw/data.csv
+      hash: md5
+      md5: 1eec95cacd0a1ad08e06b727d8b701c2
+      size: 43618
+    - path: scripts/plot-voltage.py
+      hash: md5
+      md5: 087a567a0c0f6199a908399013d564a1
+      size: 297
+    outs:
+    - path: figures/voltage-time-series.png
+      hash: md5
+      md5: a4fc5ebee750a839c23baee1e58bf94a
+      size: 45123
+  copy-figures-to-paper-dir:
+    cmd: cp -r figures paper/figures
+    deps:
+    - path: figures
+      hash: md5
+      md5: d6fd2418e3b774996ddd0f26715c36ac.dir
+      size: 45148
+      nfiles: 2
+    outs:
+    - path: paper/figures
+      hash: md5
+      md5: d6fd2418e3b774996ddd0f26715c36ac.dir
+      size: 45148
+      nfiles: 2
+  build-paper:
+    cmd: latexmk -pdf paper.tex
+    deps:
+    - path: ../figures
+      hash: md5
+      md5: d6fd2418e3b774996ddd0f26715c36ac.dir
+      size: 45148
+      nfiles: 2
+    - path: paper.tex
+      hash: md5
+      md5: f0c474020965d39585a2c0cc99d6cb8f
+      size: 519
+    outs:
+    - path: paper.pdf
+      hash: md5
+      md5: c736dfef6da2768017e4cb293adcaa3e
+      size: 89940
