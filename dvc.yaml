@@ -16,10 +16,13 @@ stages:
     cmd: cp -r figures paper/figures
     deps:
       - figures
+    outs:
+      - paper/figures
   build-paper:
     cmd: latexmk -pdf paper.tex
     wdir: paper
     deps:
-      - figures
+      - ../figures
+      - paper.tex
     outs:
       - paper.pdf

@@ -36,16 +36,26 @@ stages:
       md5: d6fd2418e3b774996ddd0f26715c36ac.dir
       size: 45148
       nfiles: 2
-  build-paper:
-    cmd: latexmk -pdf paper.tex
-    deps:
-    - path: figures
+    outs:
+    - path: paper/figures
       hash: md5
       md5: d6fd2418e3b774996ddd0f26715c36ac.dir
       size: 45148
       nfiles: 2
+  build-paper:
+    cmd: latexmk -pdf paper.tex
+    deps:
+    - path: ../figures
+      hash: md5
+      md5: d6fd2418e3b774996ddd0f26715c36ac.dir
+      size: 45148
+      nfiles: 2
+    - path: paper.tex
+      hash: md5
+      md5: 73f0146cbce30b7645dad8ae6e6830c3
+      size: 508
     outs:
     - path: paper.pdf
       hash: md5
-      md5: 32628c73153480431f86b6c2e41c2bef
+      md5: 0918666fed7a24da74d555f14208343a
       size: 89054
