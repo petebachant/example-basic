@@ -1,0 +1,6 @@
+figures
+*.aux
+*.dvi
+*.fdb_latexmk
+*.fls
+/paper.pdf

@@ -12,3 +12,14 @@ stages:
       - data/raw/data.csv
     outs:
       - figures/voltage-time-series.png
+  copy-figures-to-paper-dir:
+    cmd: cp -r figures paper/figures
+    deps:
+      - figures
+  build-paper:
+    cmd: latexmk -pdf paper.tex
+    wdir: paper
+    deps:
+      - figures
+    outs:
+      - paper.pdf
