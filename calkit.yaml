@@ -1,2 +1,6 @@
 questions:
   - Can we make reproducibility simple?
+datasets:
+  - path: data/raw/data.csv
+    title: Raw data
+    description: This is raw voltage data.
