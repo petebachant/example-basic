@@ -1,0 +1,7 @@
+stages:
+  collect-data:
+    cmd: python scripts/collect-data.py
+    deps:
+    - scripts/collect-data.py
+    outs:
+    - data/raw/data.csv
