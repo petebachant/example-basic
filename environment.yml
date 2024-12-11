@@ -1,4 +1,4 @@
-name: py
+name: calkit-example-basic
 channels:
   - conda-forge
 dependencies:
