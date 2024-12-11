@@ -8,7 +8,7 @@ all part of a single reproducible DVC pipeline.
 
 You can also view this project on [calkit.io](https://calkit.io/calkit/example-basic).
 
-This project can be reproduced with
+This project can be reproduced with:
 
 ```sh
 calkit run
