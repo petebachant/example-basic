@@ -20,3 +20,8 @@ environments:
     path: environment.yml
     kind: conda
     description: A Python environment
+  tex:
+    kind: docker
+    image: texlive/texlive:latest-full
+    wdir: /work
+    description: TeX Live via Docker.
