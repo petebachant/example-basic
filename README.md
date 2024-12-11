@@ -14,10 +14,6 @@ This project can be reproduced with
 calkit run
 ```
 
-Note that the data collection stage has some randomness built into it,
-so it should run the first time,
-but will be cached after that.
-
 ## Steps to recreate
 
 1. Create a new project on [calkit.io](https://calkit.io).
