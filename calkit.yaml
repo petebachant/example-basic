@@ -15,3 +15,8 @@ publications:
     title: The paper
     description: This is the paper.
     stage: build-paper
+environments:
+  py:
+    path: environment.yml
+    kind: conda
+    description: A Python environment

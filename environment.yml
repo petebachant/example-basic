@@ -1,0 +1,8 @@
+name: py
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - pandas
+  - matplotlib
+  - numpy
