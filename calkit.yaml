@@ -1,3 +1,7 @@
+owner: calkit
+name: example-basic
+title: Basic Calkit example
+git_repo_url: https://github.com/calkit/example-basic
 questions:
   - Can we make reproducibility simple?
 datasets:
