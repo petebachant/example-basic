@@ -9,7 +9,7 @@ if __name__ == "__main__":
     df = pd.DataFrame(
         data={"voltage": np.random.randn(1000)},
         index=pd.date_range(
-            "2024-08-01", "2024-08-01 00:00:01", freq="ms", inclusive="left"
+            "2024-12-01", "2024-12-01 00:00:01", freq="ms", inclusive="left"
         ),
     )
     df.index.name = "time"
