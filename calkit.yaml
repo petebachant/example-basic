@@ -1,5 +1,13 @@
 questions:
   - Can we make reproducibility simple?
+template:
+  project: calkit/example-basic
+  git_repo_url: https://github.com/calkit/example-basic
+  git_rev: e0fc7943573cbf102d6c0ef8942bdb644ed66da3
+dependencies:
+  - conda
+  - mamba
+  - docker
 datasets:
   - path: data/raw/data.csv
     title: Raw data
