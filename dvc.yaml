@@ -1,13 +1,13 @@
 stages:
   collect-data:
-    cmd: calkit runenv -n py -- python scripts/collect-data.py
+    cmd: calkit xenv -n py -- python scripts/collect-data.py
     deps:
       - scripts/collect-data.py
       - environment.yml
     outs:
       - data/raw/data.csv
   plot-voltage:
-    cmd: calkit runenv -n py -- python scripts/plot-voltage.py
+    cmd: calkit xenv -n py -- python scripts/plot-voltage.py
     deps:
       - scripts/plot-voltage.py
       - data/raw/data.csv
@@ -16,8 +16,8 @@ stages:
       - figures/voltage-time-series.png
   build-paper:
     cmd: >
-      calkit runenv -n tex --
-      "cd paper && latexmk -interaction=nonstopmode -pdf paper.tex"
+      calkit xenv -n tex --
+      latexmk -cd -interaction=nonstopmode -pdf paper/paper.tex
     deps:
       - figures
       - paper/paper.tex

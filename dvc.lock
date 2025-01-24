@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   collect-data:
-    cmd: calkit runenv -n py -- python scripts/collect-data.py
+    cmd: calkit xenv -n py -- python scripts/collect-data.py
     deps:
     - path: environment.yml
       hash: md5
@@ -14,15 +14,15 @@ stages:
     outs:
     - path: data/raw/data.csv
       hash: md5
-      md5: f31ddb022aa25cf3079812a08fb205a4
-      size: 43650
+      md5: 2ba6a2254202b7055d370eb59a35dfae
+      size: 43644
   plot-voltage:
-    cmd: calkit runenv -n py -- python scripts/plot-voltage.py
+    cmd: calkit xenv -n py -- python scripts/plot-voltage.py
     deps:
     - path: data/raw/data.csv
       hash: md5
-      md5: f31ddb022aa25cf3079812a08fb205a4
-      size: 43650
+      md5: 2ba6a2254202b7055d370eb59a35dfae
+      size: 43644
     - path: environment.yml
       hash: md5
       md5: 627d0116e60eab837fbf07edb4d370e0
@@ -34,8 +34,8 @@ stages:
     outs:
     - path: figures/voltage-time-series.png
       hash: md5
-      md5: b54acc0cf8f21525672bc596f218c4bc
-      size: 45610
+      md5: d4cd33821c032be468a77d65873937bc
+      size: 43613
   copy-figures-to-paper-dir:
     cmd: cp -r figures paper/figures
     deps:
@@ -51,13 +51,12 @@ stages:
       size: 45148
       nfiles: 2
   build-paper:
-    cmd: "calkit runenv -n tex -- \"cd paper && latexmk -interaction=nonstopmode -pdf
-      paper.tex\"\n"
+    cmd: "calkit xenv -n tex -- latexmk -cd -interaction=nonstopmode -pdf paper/paper.tex\n"
     deps:
     - path: figures
       hash: md5
-      md5: 2d2ab0f594b90970504909b6ce72a57e.dir
-      size: 45635
+      md5: 1a9009ee25ecfe1fbfe1916de2eb7deb.dir
+      size: 43638
       nfiles: 2
     - path: paper/paper.tex
       hash: md5
@@ -66,5 +65,5 @@ stages:
     outs:
     - path: paper/paper.pdf
       hash: md5
-      md5: b6ddbca00eb7e7c59e7fced1e6f10983
-      size: 95895
+      md5: 272ef20d54a4c536be5a92693164a735
+      size: 92833
