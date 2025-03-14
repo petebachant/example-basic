@@ -12,7 +12,8 @@
         "ms-python.vscode-pylance",
         "streetsidesoftware.code-spell-checker",
         "redhat.vscode-yaml",
-        "akamud.vscode-theme-onedark"
+        "akamud.vscode-theme-onedark",
+        "mechatroner.rainbow-csv"
       ],
       "settings": {
         "latex-workshop.latex.external.build.command": "calkit",
@@ -27,10 +28,17 @@
         "redhat.telemetry.enabled": true,
         "window.menuBarVisibility": "classic",
         "workbench.colorTheme": "Atom One Dark",
-        "editor.minimap.enabled": false
+        "editor.minimap.enabled": false,
+        "cSpell.userWords": [
+          "calkit",
+          "Calkit"
+        ]
       }
     }
   },
+  "mounts": [
+    "source=${localEnv:HOME}/.calkit,target=/home/vscode/.calkit,type=bind,consistency=cached"
+  ],
   "postCreateCommand": "conda init bash",
   "postStartCommand": "docker pull texlive/texlive:latest-full"
 }
