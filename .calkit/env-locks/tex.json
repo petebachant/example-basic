@@ -5,7 +5,7 @@
         ],
         "Parent": "",
         "Comment": "buildkit.dockerfile.v0",
-        "Created": "2025-05-11T13:45:24.681068416Z",
+        "Created": "2025-05-11T07:29:25.753894634Z",
         "Author": "",
         "Config": {
             "Hostname": "",
@@ -39,31 +39,31 @@
                 "org.opencontainers.image.url": "https://gitlab.com/islandoftex/images/texlive"
             }
         },
-        "Architecture": "arm64",
+        "Architecture": "amd64",
         "Os": "linux",
-        "Size": 2409562089,
+        "Size": 5098898686,
         "GraphDriver": {
-            "Data": null,
-            "Name": "overlayfs"
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/5bc28b3c4561fe6f5f4789695d8f2ff38b4afe63974172a7f5df84a27b710344/diff:/var/lib/docker/overlay2/f7c7e4d9e24106b03ce2a0e9c6317055d01215575e01edf098feadabf34bc1f7/diff:/var/lib/docker/overlay2/444232db72dbfbdab8797facff8e0be6ffc1170c1ca5169832cb048aa5742578/diff:/var/lib/docker/overlay2/3c34c3638bd6a514d2422edf36f44fd91ac895c27816eb777362f90c1e2ec0d3/diff:/var/lib/docker/overlay2/d8d0510a677910886c2cf3d64b98bb49e17aa3ecd634e4d1d96037c8d6955174/diff:/var/lib/docker/overlay2/4f741c4e3c373acbeda93205286ca87b225b107950b9935c1650fdaec07e1222/diff:/var/lib/docker/overlay2/8bb6274cba798042344cd51470a5d22837d6a9bdc82980ba463ec9748510e54f/diff:/var/lib/docker/overlay2/c5c5aada03ec75964aef8dd5512d3fa17fb929f310cba1daa587748bc71a3ab4/diff",
+                "MergedDir": "/var/lib/docker/overlay2/42a06a773dcef7bcc5c0f02ef86ed0b16af04fb6db6d29370050e25fbb76d920/merged",
+                "UpperDir": "/var/lib/docker/overlay2/42a06a773dcef7bcc5c0f02ef86ed0b16af04fb6db6d29370050e25fbb76d920/diff",
+                "WorkDir": "/var/lib/docker/overlay2/42a06a773dcef7bcc5c0f02ef86ed0b16af04fb6db6d29370050e25fbb76d920/work"
+            },
+            "Name": "overlay2"
         },
         "RootFS": {
             "Type": "layers",
             "Layers": [
-                "sha256:f20086072b1d2fffdc8a8a3afc546d1ecb13a9047ac9cc6c941e9783ba2c1c40",
-                "sha256:cc4ebc54dd55374e26421ee3710a3cb932690ec294b3665230f54ae0ddbbacec",
-                "sha256:2ff8561f9f970e166f982b4a6f584a0ce9a275836a281d9e5b62fb27d6a99e8f",
+                "sha256:e34100b5ade5263e40d8c20bb8ccf79395f40b91df4c98cc15d8e054c394d562",
+                "sha256:04cfdf16bd0dd805426e964fc340876a2a200d0eefc5b90b2489c1478c110fa4",
+                "sha256:0bd654080aa3c910ab918b3d1b765ff2c109cee2812dcb26eb90cee366da7cf6",
                 "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
-                "sha256:6b5bb1acd1ecb71e7df10f16fba58ee8afbc1a4295b26486766742471c7380bf",
-                "sha256:84cc1f955c35ccf33e8c50a7e8cab52e5c5e186124d3d2dc294de9d227ca2f9e",
-                "sha256:e408bd808583af5c8c473d3a99d1e503095ebae3752b54408e274eb7596f163f",
-                "sha256:8d7558178b2bf04a68ead86ebe9fe20fe199f9e4703cddf9389f508711365a83",
-                "sha256:0b653ec0cefe2beb09dee6dfd05199f92481c2cdd0d893aa5f6cfca402f301d8"
+                "sha256:ae9a7ced9cc5ad671cdfcfc60b478a5037759d7e15cbb107409b852abedbf2fc",
+                "sha256:687d1879490fec7a67d8785d6a51620165a31a62698ad55fa39117cc616e013b",
+                "sha256:a7bae0a2e696be2c17c9ace1fd26c8887c608d6403ecc769ad02352a06b013c3",
+                "sha256:84705f8c61963468105a8748746e7a7cde08415bc79e90434ca6fa481aa9bb8f",
+                "sha256:2d3e39f031d41a5dad8649704ef6f72eb80f968c65bb3b1b28fe8929dd5fbc68"
             ]
-        },
-        "Descriptor": {
-            "mediaType": "application/vnd.docker.distribution.manifest.list.v2+json",
-            "digest": "sha256:ac2a1fbc4dad1ec27c7407c24907af5a38a5f53c4baf9c6dc5973efd34b355e6",
-            "size": 685
         },
         "DockerfileMD5": null,
         "DepsMD5s": {}
