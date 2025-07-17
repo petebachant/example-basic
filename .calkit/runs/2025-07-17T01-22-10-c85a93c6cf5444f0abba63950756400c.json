@@ -1,0 +1,138 @@
+{
+  "id": "c85a93c6cf5444f0abba63950756400c",
+  "system_id": "5fe9b527757788746c31d32077a5a16430b66504",
+  "start_time": "2025-07-17T01:22:10.038871+00:00",
+  "end_time": "2025-07-17T01:22:57.401150+00:00",
+  "targets": [],
+  "force": false,
+  "dvc_args": [],
+  "status": "completed",
+  "stages": {
+    "_check-env-py": {
+      "start_time": "2025-07-17T01:22:10.195000",
+      "end_time": "2025-07-17T01:22:30.297000",
+      "status": "completed"
+    },
+    "_check-env-tex": {
+      "start_time": "2025-07-17T01:22:30.297000",
+      "end_time": "2025-07-17T01:22:31.034000",
+      "status": "completed"
+    },
+    "_check-env-py-uv": {
+      "start_time": "2025-07-17T01:22:31.034000",
+      "end_time": "2025-07-17T01:22:31.687000",
+      "status": "completed"
+    },
+    "collect-data": {
+      "start_time": "2025-07-17T01:22:31.687000",
+      "end_time": "2025-07-17T01:22:43.692000",
+      "status": "completed"
+    },
+    "plot-voltage": {
+      "start_time": "2025-07-17T01:22:43.692000",
+      "end_time": "2025-07-17T01:22:55.819000",
+      "status": "completed"
+    },
+    "build-paper": {
+      "start_time": "2025-07-17T01:22:55.819000"
+    }
+  },
+  "git_rev": "1d56379b6a1148cefb29995de1144d1a68b6893d",
+  "git_branch": "main",
+  "git_changed_files_before": [
+    "dvc.yaml"
+  ],
+  "git_staged_files_before": [],
+  "git_untracked_files_before": [],
+  "git_changed_files_after": [
+    ".calkit/env-locks/py.yml",
+    "dvc.yaml"
+  ],
+  "git_staged_files_after": [
+    "dvc.lock"
+  ],
+  "git_untracked_files_after": [],
+  "dvc_status_before": {
+    "_check-env-py": [
+      {
+        "changed deps": {
+          "environment.yml": "modified"
+        }
+      },
+      {
+        "changed outs": {
+          ".calkit/env-locks/py.yml": "modified"
+        }
+      },
+      "always changed"
+    ],
+    "_check-env-tex": [
+      "always changed"
+    ],
+    "_check-env-py-uv": [
+      {
+        "changed deps": {
+          "requirements.txt": "modified"
+        }
+      },
+      {
+        "changed outs": {
+          ".calkit/env-locks/py-uv.txt": "modified"
+        }
+      },
+      "always changed"
+    ],
+    "collect-data": [
+      {
+        "changed deps": {
+          ".calkit/env-locks/py.yml": "modified"
+        }
+      }
+    ],
+    "plot-voltage": [
+      {
+        "changed deps": {
+          ".calkit/env-locks/py-uv.txt": "modified"
+        }
+      },
+      "changed command"
+    ]
+  },
+  "dvc_data_status_before": {
+    "not_in_cache": [],
+    "not_in_remote": [],
+    "committed": {},
+    "uncommitted": {},
+    "untracked": [],
+    "unchanged": [
+      "data/raw/data.csv",
+      "figures/voltage-time-series.png",
+      "paper/paper.pdf"
+    ]
+  },
+  "dvc_status_after": {
+    "_check-env-py": [
+      "always changed"
+    ],
+    "_check-env-tex": [
+      "always changed"
+    ],
+    "_check-env-py-uv": [
+      "always changed"
+    ]
+  },
+  "dvc_data_status_after": {
+    "not_in_cache": [],
+    "not_in_remote": [],
+    "committed": {
+      "modified": [
+        "figures/voltage-time-series.png",
+        "paper/paper.pdf",
+        "data/raw/data.csv"
+      ]
+    },
+    "uncommitted": {},
+    "untracked": [],
+    "unchanged": []
+  }
+}

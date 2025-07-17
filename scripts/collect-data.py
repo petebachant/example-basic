@@ -5,6 +5,9 @@ import os
 import numpy as np
 import pandas as pd
 
+# Set random seed for reproducibility
+np.random.seed(33)
+
 if __name__ == "__main__":
     df = pd.DataFrame(
         data={"voltage": np.random.randn(1000)},
