@@ -1,0 +1,130 @@
+{
+  "id": "b923740c5c9940e997eb0a3412d032ac",
+  "system_id": "5fe9b527757788746c31d32077a5a16430b66504",
+  "start_time": "2025-07-17T01:17:00.277856+00:00",
+  "end_time": "2025-07-17T01:17:11.433243+00:00",
+  "targets": [],
+  "force": false,
+  "dvc_args": [],
+  "status": "completed",
+  "stages": {
+    "_check-env-py": {
+      "start_time": "2025-07-17T01:17:00.442000",
+      "end_time": "2025-07-17T01:17:01.566000",
+      "status": "completed"
+    },
+    "_check-env-tex": {
+      "start_time": "2025-07-17T01:17:01.566000",
+      "end_time": "2025-07-17T01:17:03.167000",
+      "status": "completed"
+    },
+    "collect-data": {
+      "start_time": "2025-07-17T01:17:03.167000",
+      "end_time": "2025-07-17T01:17:06.701000",
+      "status": "completed"
+    },
+    "plot-voltage": {
+      "start_time": "2025-07-17T01:17:06.701000",
+      "end_time": "2025-07-17T01:17:09.517000",
+      "status": "completed"
+    },
+    "build-paper": {
+      "start_time": "2025-07-17T01:17:09.517000"
+    }
+  },
+  "git_rev": "778a86bc5e15e12461dd47456031ccbd431fde38",
+  "git_branch": "main",
+  "git_changed_files_before": [],
+  "git_staged_files_before": [],
+  "git_untracked_files_before": [
+    ".calkit/systems/5fe9b527757788746c31d32077a5a16430b66504.json"
+  ],
+  "git_changed_files_after": [
+    ".calkit/env-locks/tex.json"
+  ],
+  "git_staged_files_after": [
+    "dvc.lock"
+  ],
+  "git_untracked_files_after": [
+    ".calkit/systems/5fe9b527757788746c31d32077a5a16430b66504.json"
+  ],
+  "dvc_status_before": {
+    "_check-env-py": [
+      "always changed"
+    ],
+    "_check-env-tex": [
+      "always changed"
+    ],
+    "collect-data": [
+      {
+        "changed outs": {
+          "data/raw/data.csv": "not in cache"
+        }
+      }
+    ],
+    "plot-voltage": [
+      {
+        "changed deps": {
+          "data/raw/data.csv": "modified"
+        }
+      },
+      {
+        "changed outs": {
+          "figures/voltage-time-series.png": "not in cache"
+        }
+      }
+    ],
+    "build-paper": [
+      {
+        "changed deps": {
+          "figures": "modified"
+        }
+      },
+      {
+        "changed outs": {
+          "paper/paper.pdf": "not in cache"
+        }
+      }
+    ]
+  },
+  "dvc_data_status_before": {
+    "not_in_cache": [
+      "paper/paper.pdf",
+      "figures/voltage-time-series.png",
+      "data/raw/data.csv"
+    ],
+    "not_in_remote": [],
+    "committed": {},
+    "uncommitted": {
+      "modified": [
+        "paper/paper.pdf",
+        "figures/voltage-time-series.png",
+        "data/raw/data.csv"
+      ]
+    },
+    "untracked": [],
+    "unchanged": []
+  },
+  "dvc_status_after": {
+    "_check-env-py": [
+      "always changed"
+    ],
+    "_check-env-tex": [
+      "always changed"
+    ]
+  },
+  "dvc_data_status_after": {
+    "not_in_cache": [],
+    "not_in_remote": [],
+    "committed": {
+      "modified": [
+        "paper/paper.pdf",
+        "figures/voltage-time-series.png",
+        "data/raw/data.csv"
+      ]
+    },
+    "uncommitted": {},
+    "untracked": [],
+    "unchanged": []
+  }
+}
