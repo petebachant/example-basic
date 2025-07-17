@@ -17,6 +17,11 @@ environments:
     kind: docker
     image: texlive/texlive:latest-full
     description: TeX Live via Docker.
+  py-uv:
+    path: requirements.txt
+    kind: uv-venv
+    prefix: .venv
+    python: '3.13'
 pipeline:
   stages:
     collect-data:
@@ -28,7 +33,7 @@ pipeline:
     plot-voltage:
       kind: python-script
       script_path: scripts/plot-voltage.py
-      environment: py
+      environment: py-uv
       inputs:
         - from_stage_outputs: collect-data
       outputs:
