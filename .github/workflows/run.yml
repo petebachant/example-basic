@@ -1,9 +1,21 @@
 name: Run pipeline
 
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: write
+  id-token: write
+
+# Make sure we only ever run one per branch so we don't have issues pushing
+# after running the pipeline
+concurrency:
+  group: calkit-run-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   main:
@@ -11,34 +23,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # For PRs, checkout the head ref to avoid detached HEAD
+          ref: ${{ github.head_ref || github.ref_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Configure Git credentials
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - name: Setup Miniforge
-        uses: conda-incubator/setup-miniconda@v3
-        with:
-          miniforge-version: latest
-          auto-activate-base: true
-          conda-remove-defaults: true
-      - run: pip install calkit-python
-      - name: Restore DVC cache
-        id: cache-dvc-restore
-        uses: actions/cache/restore@v4
-        with:
-          path: .dvc/cache
-          key: ${{ runner.os }}-dvc-cache
-      - run: calkit config remote-auth
-        env:
-          CALKIT_DVC_TOKEN: ${{ secrets.CALKIT_DVC_TOKEN }}
-      - run: dvc pull
-      - run: calkit run
-      - run: calkit save -am "Run pipeline"
-        env:
-          CALKIT_DVC_TOKEN: ${{ secrets.CALKIT_DVC_TOKEN }}
-      - name: Save DVC cache
-        id: cache-dvc-save
-        uses: actions/cache/save@v4
-        with:
-          path: .dvc/cache
-          key: ${{ steps.cache-dvc-restore.outputs.cache-primary-key }}
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+      - name: Install Calkit
+        run: uv tool install calkit-python
+      - name: Run Calkit
+        uses: calkit/run-action@v2
