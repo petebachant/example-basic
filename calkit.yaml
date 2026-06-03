@@ -1,8 +1,8 @@
-owner: calkit
+owner: petebachant
 name: example-basic
 title: Basic Calkit example
 description: A basic Calkit example project.
-git_repo_url: https://github.com/calkit/example-basic
+git_repo_url: https://github.com/petebachant/example-basic
 dependencies:
   - docker
   - conda
@@ -21,7 +21,7 @@ environments:
     path: requirements.txt
     kind: uv-venv
     prefix: .venv
-    python: '3.13'
+    python: "3.13"
 pipeline:
   stages:
     collect-data:
