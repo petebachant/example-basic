@@ -1,0 +1,59 @@
+{
+  "build-paper": {
+    "start_time": "2026-11-01T00:34:41.155000",
+    "end_time": "2026-11-01T00:34:48.375000",
+    "environment": "tex",
+    "git_rev": "f58bfe2b7491cf3b4a51cf71001fa6701f347b18",
+    "git_dirty": true,
+    "dvc_lock_hash": "sha256:7f3c4ad36689446dd1f46f7138f951f9fd0acd9d1bf22d4feea1bb914873dbfd",
+    "calkit_version": "0.48.3.dev24+gb948f7a3",
+    "calkit_git_rev": "905c7c61e3f81e63d82229bd6c35d43d2ba389ca",
+    "system": {
+      "machine_id": "332d58d3-80d0-49c9-a733-2aeb90a56fd1",
+      "os": "Windows",
+      "os_version": "11",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+      "cpu_count": 4,
+      "memory_gb": 15.9
+    }
+  },
+  "collect-data": {
+    "start_time": "2026-11-01T00:17:12.457000",
+    "end_time": "2026-11-01T00:18:03.075000",
+    "environment": "py",
+    "git_rev": "f58bfe2b7491cf3b4a51cf71001fa6701f347b18",
+    "git_dirty": true,
+    "dvc_lock_hash": "sha256:f54be39943ca37a775bfb444728b3d4bae01345f133e213429cac03fc396f3de",
+    "calkit_version": "0.48.3.dev24+gb948f7a3",
+    "calkit_git_rev": "b2ea7358d58584b7a6238f0aa4f23e4aac93a708",
+    "system": {
+      "machine_id": "332d58d3-80d0-49c9-a733-2aeb90a56fd1",
+      "os": "Windows",
+      "os_version": "11",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+      "cpu_count": 4,
+      "memory_gb": 15.9
+    }
+  },
+  "plot-voltage": {
+    "start_time": "2026-11-01T00:18:03.075000",
+    "end_time": "2026-11-01T00:18:19.754000",
+    "environment": "py-uv",
+    "git_rev": "f58bfe2b7491cf3b4a51cf71001fa6701f347b18",
+    "git_dirty": true,
+    "dvc_lock_hash": "sha256:6ff9774bfce630933d3e6732b894281279da76636628507a990694aa41bce399",
+    "calkit_version": "0.48.3.dev24+gb948f7a3",
+    "calkit_git_rev": "b2ea7358d58584b7a6238f0aa4f23e4aac93a708",
+    "system": {
+      "machine_id": "332d58d3-80d0-49c9-a733-2aeb90a56fd1",
+      "os": "Windows",
+      "os_version": "11",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+      "cpu_count": 4,
+      "memory_gb": 15.9
+    }
+  }
+}

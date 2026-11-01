@@ -5,39 +5,39 @@ stages:
     deps:
     - path: .calkit/env-locks/py
       hash: md5
-      md5: 5ba8ead2cf621e97336ba9e44ed18953.dir
-      size: 7916
+      md5: 810acb09595a0a1f7e6df6518c70c613.dir
+      size: 8160
       nfiles: 2
     - path: scripts/collect-data.py
       hash: md5
-      md5: 16af53b5583d4dbd6da22801f5353752
-      size: 482
+      md5: 7f049ff59ed43f2fe865fe83e3f1e7c1
+      size: 502
     outs:
     - path: data/raw/data.csv
       hash: md5
-      md5: ea578f20eae921de9821ba5e899d7b96
-      size: 43691
+      md5: 2be3a93156cd35c41e3591b625c04289
+      size: 44692
   plot-voltage:
     cmd: calkit xenv -n py-uv --no-check -- python scripts/plot-voltage.py
     deps:
     - path: .calkit/env-locks/py-uv
       hash: md5
-      md5: 46894f6e02679ebd532cbab123596eb2.dir
-      size: 462
+      md5: 1b46d429c94d48cca6e03e1ecc13637c.dir
+      size: 476
       nfiles: 2
     - path: data/raw/data.csv
       hash: md5
-      md5: ea578f20eae921de9821ba5e899d7b96
-      size: 43691
+      md5: 2be3a93156cd35c41e3591b625c04289
+      size: 44692
     - path: scripts/plot-voltage.py
       hash: md5
-      md5: 087a567a0c0f6199a908399013d564a1
-      size: 297
+      md5: fd1c9acc53ff4077cf0b07991dbdedca
+      size: 309
     outs:
     - path: figures/voltage-time-series.png
       hash: md5
-      md5: 83ec7fe20cd64baefd9c9bac4bb18865
-      size: 45575
+      md5: 9a8bde28b63b6e55e44bdd47bb5073b8
+      size: 42278
   copy-figures-to-paper-dir:
     cmd: cp -r figures paper/figures
     deps:
@@ -57,23 +57,23 @@ stages:
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: c247e3dbe3ae8de843620766bdb3d930.dir
-      size: 1147
-      nfiles: 1
+      md5: b8c310086da8a242078829ee78d3f8bb.dir
+      size: 2136
+      nfiles: 2
     - path: figures
       hash: md5
-      md5: 22a87519088caf476c000506080e8d01.dir
-      size: 45600
+      md5: 30b71f789181987be900a6184a3a9c2d.dir
+      size: 42304
       nfiles: 2
     - path: paper/paper.tex
       hash: md5
-      md5: 1480301e18c57bf533d604e1a3593101
-      size: 653
+      md5: 90cc9ad46f55fc638354deccdebb7ebb
+      size: 698
     outs:
     - path: paper/paper.pdf
       hash: md5
-      md5: d055d2a0a6a0764413c0ee92c5a2bb67
-      size: 94958
+      md5: 1646e91eea27983e23d896a633c3b2b2
+      size: 95375
   _check_env_py:
     cmd: calkit check conda-env --file environment.yml --output 
       .calkit/env-locks/py.yml

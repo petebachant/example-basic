@@ -1,9 +1,6 @@
 {
-    "RepoTags": [
-        "texlive/texlive:latest-full"
-    ],
     "RepoDigests": [
-        "texlive/texlive@sha256:73d982f09c52385f4c7f23dc4deeb49fea1ec87eab567e854c7b78007c2f0e74"
+        "sha256:73d982f09c52385f4c7f23dc4deeb49fea1ec87eab567e854c7b78007c2f0e74"
     ],
     "Architecture": "amd64",
     "Os": "linux",

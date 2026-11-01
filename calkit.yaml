@@ -3,11 +3,14 @@ name: example-basic
 title: Basic Calkit example
 description: A basic Calkit example project.
 git_repo_url: https://github.com/petebachant/example-basic
-dependencies:
+
+requirements:
   - docker
   - conda
+
 questions:
   - Can we make reproducibility simple?
+
 environments:
   py:
     path: environment.yml
@@ -22,6 +25,7 @@ environments:
     kind: uv-venv
     prefix: .venv
     python: "3.13"
+
 pipeline:
   stages:
     collect-data:
@@ -46,16 +50,19 @@ pipeline:
         - figures
       outputs:
         - paper/paper.pdf
+
 datasets:
   - path: data/raw/data.csv
     title: Raw data
     description: This is raw voltage data.
     stage: collect-data
+
 figures:
   - path: figures/voltage-time-series.png
     title: Raw voltage time series
     description: A plot of the raw voltage time series.
     stage: plot-voltage
+
 publications:
   - path: paper/paper.pdf
     title: The paper
